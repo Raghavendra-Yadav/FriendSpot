@@ -1,0 +1,67 @@
+body {margin: 0px; font-family: Arial, Helvetica, sans-serif; line-height: 1.51; font-size: 14px;}
+#pageTop {
+  background: url(style/headerbox.png) repeat-x;
+  height: 53px;
+  box-shadow: 0 4px 4px -1px #26408B;
+}
+._logo{
+  float: left;
+}
+.link.fslink{
+  width: 190px;
+  height: 36px;
+  background-position: 0 0;
+}
+.link{
+  background-image: url("images/logo.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.con {
+  margin-top: -80px;
+}
+#global_container{
+  margin:0px auto;
+  position: relative;
+  zoom:1;
+}
+.layer{
+  position: relative;
+}
+#content{
+  margin: 0px;
+  outline:none;
+  padding: 0px;
+  width: auto;
+}
+.fs_content{
+  padding-bottom: 20px;
+}
+.clearfix{
+  zoom:1px;
+}
+.fsIndex .gradient{
+  background: linear-gradient(#26408B, #A6CFD5, #C2E7D9);
+  background-image: linear-gradient(rgb(38, 64, 139), rgb(166, 207, 213), rgb(194, 231, 217));
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+}
+.fsIndex .gradient .gradientcontainer{
+  margin: auto;
+  width: 980px;
+}
+#pageBottom{
+  background: #fff;
+  padding: 24px;
+  font-size: 12px;
+  color: #737373;
+  text-align: center;
+}

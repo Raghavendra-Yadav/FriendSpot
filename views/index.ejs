@@ -1,8 +1,373 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>FriendSpot</title>
+    <meta charset="utf-8" />
+    <title>Welcome to FriendSpot</title>
+    <meta property="og:site_name" content="www.friendsspot.com" />
+    <meta property="og:image" content="fs.png" />
+    <meta property="og:locale" content="en_GB" />
+    <meta
+      name="description"
+      content="Create an account or Log in to FriendSpot. Send messages and get updates."
+    />
+    <link type="text/css" rel="stylesheet" href="main.css" />
+    <link type="text/css" rel="stylesheet" href="body.css" />
+    <link type="text/css" rel="stylesheet" href="style/body1.css" />
+    <link type="text/css" rel="stylesheet" href="style/main1.css" />
+    <link type="text/css" rel="stylesheet" href="style/style1.css" />
+    <link rel="shortcut icon" href="../public/images/fav.png" />
+    <style>
+      /* Reset default margin and padding */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #6f4bd8, #ffffff);
+      }
+
+      #header {
+        background-color: #6f4bd8;
+        padding: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: auto;
+      }
+
+      /* Footer style */
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: white;
+        padding: 10px;
+        background-color: #6f4bd8;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        background: linear-gradient(to top, #ffffff, #f0f2f5);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        animation: fadein 1s;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #6f4bd8;
+        font-family: "San Francisco", Arial, sans-serif; /* Apple's San Francisco font */
+        font-weight: bold; /* Bold font weight */
+        font-size: 24px; /* Adjust font size */
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+        background-color: #f6f7f9; /* Twitter style background */
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+        outline: none;
+        border-color: #6f4bd8;
+        box-shadow: 0 0 0 2px rgba(111, 75, 216, 0.1); /* Facebook style focus */
+      }
+
+      /* Style radio buttons */
+      .input-group-radio {
+        display: flex;
+        align-items: center; /* Align items vertically in the middle */
+        margin-bottom: 15px;
+      }
+
+      .input-group-radio label {
+        margin-right: 10px;
+      }
+
+      .input-group-radio input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+        outline: none;
+        margin-right: 5px;
+        display: flex;
+        justify-content: center; /* Align content horizontally in the center */
+        align-items: center; /* Align items vertically in the center */
+      }
+
+      .input-group-radio input[type="radio"]:checked {
+        background-color: #6f4bd8;
+        border-color: #6f4bd8;
+      }
+
+      /* Hover effect on submit button */
+      .container form button[type="submit"]:hover {
+        background-color: #1466c2;
+      }
+
+      /* Focus style for form fields */
+      .container form input:focus {
+        outline: none;
+        border-color: #1877f2;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <h1>Hello World!</h1>
+  <body class="fsIndex">
+    <header id="pageTop">
+      <div class="pageTopLogo _logo">
+        <h1>
+          <a href="http://test876.net23.net" title="FriendSpot Home">
+            <i class="fs_logo img link fslink">
+              <u>FriendSpot Logo</u>
+            </i>
+          </a>
+        </h1>
+        <div class="pull-right" style="display: inline-block"></div>
+      </div>
+    </header>
+    <div style="padding-top: 80px">
+      <div class="con">
+        <div id="global_container" class="layer">
+          <div class="fs_content clearfix" id="content" role="main">
+            <div>
+              <div class="gradient" style="height: 800px">
+                <div class="gradientcontainer">
+                  <div class="clearfix">
+                    <div
+                      class="login_container uprit _upright"
+                      style="
+                        width: 500px;
+                        height: 100px;
+                        padding-left: 250px;
+                        padding-right: 200px;
+                      "
+                    >
+                      <form
+                        action="/login"
+                        method="POST"
+                        onsubmit="return doLogin(this)"
+                      >
+                        <table cellspacing="0" role="presentation">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <label for="email">Enter your Email</label>
+                              </td>
+                              <td>
+                                <label for="password">Password</label>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <input
+                                  type="email"
+                                  id="email"
+                                  class="inputtext _cssep"
+                                  name="email"
+                                  maxlength="88"
+                                  tabindex="1"
+                                />
+                              </td>
+                              <td>
+                                <input
+                                  type="password"
+                                  id="password"
+                                  name="password"
+                                  class="inputtext _cssep"
+                                  maxlength="100"
+                                  tabindex="2"
+                                />
+                              </td>
+                              <td>
+                                <button
+                                  id="loginbtn"
+                                  class="_shgk _rthj _fhgr _fhsf selected _569"
+                                  tabindex="4"
+                                  type="submit"
+                                  name="submit"
+                                >
+                                  Sign In!
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </form>
+                    </div>
+                    <div class="container">
+                      <h2>Create New Account</h2>
+                      <form
+                        action="/signup"
+                        method="POST"
+                        onsubmit="return doRegister(this);"
+                      >
+                        <div>
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Full Name"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <input
+                            type="text"
+                            name="username"
+                            placeholder="Username"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                          />
+                        </div>
+                        <div>
+                          <input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            required
+                          />
+                        </div>
+                        <div class="input-group-radio">
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="Male"
+                            id="male"
+                            checked
+                          />
+                          <label for="male">Male</label>
+                          <input
+                            type="radio"
+                            name="gender"
+                            value="Female"
+                            id="female"
+                          />
+                          <label for="female">Female</label>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                      </form>
+                      <a href="/login">Already have an account? Log in</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function doLogin(form) {
+        form.submit.disabled = true; // Disable the submit button to prevent multiple submissions
+        form.submit.innerHTML = "Logging in..."; // Change the button text to indicate logging in
+
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST", "/login", true); // Specify the URL and method for the request
+
+        ajax.onreadystatechange = function () {
+          if (this.readyState == 4) {
+            // Check if the request is complete
+            form.submit.disabled = false; // Enable the submit button
+            form.submit.innerHTML = "Login"; // Restore the original button text
+
+            if (this.status == 200) {
+              // Check if the request was successful
+              var response = JSON.parse(this.responseText); // Parse the response JSON
+
+              alert(response.message); // Show an alert with the response message
+
+              if (response.status == "success") {
+                var accessToken = response.accessToken;
+                localStorage.setItem("access_token", accessToken);
+                console.log("Profile Image:", response.profileImage);
+                if (response.profileImage == "") {
+                  window.location.href = "/updateProfile";
+                } else {
+                  window.location.href = "/feed";
+                }
+              } else {
+                alert(response.message); // Show an error alert
+              }
+            } else {
+              alert("An error occurred while logging in. Please try again."); // Show an error alert
+            }
+          }
+        };
+
+        ajax.send(new FormData(form));
+        return false;
+      }
+    </script>
+    <script>
+      function doRegister(form) {
+          form.submit.setAttribute("disabled", "disabled");
+          form.submit.innerHTML = "Registering...";
+
+          var ajax = new XMLHttpRequest();
+          ajax.open("POST", "/signup", true); <!-- Corrected URL -->
+
+          ajax.onreadystatechange = function () {
+              if (this.readyState == 4 && this.status == 200) {
+                  form.submit.removeAttribute("disabled");
+                  form.submit.innerHTML = "Register";
+
+                  var response = JSON.parse(this.responseText);
+                  alert(response.message);
+
+                  if (response.status == "success") {
+                      window.location.href = "/login";
+                  }
+              }
+          };
+
+          ajax.send(new FormData(form));
+          return false;
+      }
+    </script>
   </body>
 </html>

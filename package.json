@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@tensorflow/tfjs": "^3.0.0",
-    "axios": "^0.27.2",
+    "axios": "^1.6.8",
     "bad-words": "^3.0.4",
     "bcryptjs": "^2.4.3",
     "cryptr": "^6.0.2",
@@ -22,13 +22,14 @@
     "fs": "0.0.1-security",
     "get-video-duration": "^4.0.0",
     "http": "0.0.1-security",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
     "moment-timezone": "^0.5.34",
     "mongodb": "^3.5.7",
     "node-cron": "^3.0.0",
     "nodemailer": "^6.4.11",
     "request": "^2.88.2",
-    "socket.io": "^2.3.0",
+    "serve-favicon": "^2.5.0",
+    "socket.io": "^4.7.5",
     "stripe": "^10.14.0",
     "videojs-wavesurfer": "^3.8.0"
   }
